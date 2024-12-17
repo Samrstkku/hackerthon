@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Digital Thela</title>
+        <link rel="stylesheet" href="index.css"> 
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <script>
+            // Show and hide forms
+            function showLoginForm() {
+                document.getElementById('loginForm').style.display = 'block';
+                document.getElementById('registerForm').style.display = 'none';
+            }
+            function showRegisterForm() {
+                document.getElementById('registerForm').style.display = 'block';
+                document.getElementById('loginForm').style.display = 'none';
+            }
+            function closeForms() {
+                document.getElementById('loginForm').style.display = 'none';
+                document.getElementById('registerForm').style.display = 'none';
+            }
+
+            // Handle login form submission
+            function handleLogin(event) {
+                event.preventDefault(); // Prevent page reload
+                const username = document.getElementById('loginUsername').value;
+                const password = document.getElementById('loginPassword').value;
+
+                alert(`Login successful!\nUsername: ${username}`);
+                closeForms(); // Close the form
+            }
+
+            // Handle register form submission
+            function handleRegister(event) {
+                event.preventDefault(); // Prevent page reload
+                const fullName = document.getElementById('registerName').value;
+                const email = document.getElementById('registerEmail').value;
+                const password = document.getElementById('registerPassword').value;
+                const confirmPassword = document.getElementById('registerConfirmPassword').value;
+
+                if (password !== confirmPassword) {
+                    alert("Passwords do not match!");
+                    return;
+                }
+
+                alert(`Registration successful!\nName: ${fullName}\nEmail: ${email}`);
+                closeForms(); // Close the form
+            }
+              function goToWebpage() {
+        // Redirect to webpage.html
+            window.location.href = 'index1.html';
+              }
+        </script>
+    </head>
+    <body>
+        <header class="main-heading">
+            <a href="website.html">
+                <img src="./logo.jpg" alt="Website Logo" class="logo">
+            </a>
+            <nav> 
+                <div class="menu-item">
+                    <a href="#" class="about">About</a>
+                    <div class="description-box">
+                        <h4>About Us</h4>
+                        <p>Discover our mission to bring the best meals from top restaurants straight to your door. We are committed to fast, reliable, and quality food delivery services.</p>
+                    </div>
+                </div>
+            
+                <div class="menu-item">
+                    <a href="#" class="services">Services</a>
+                    <div class="description-box">
+                        <h4>Our Services</h4>
+                        <p>We offer quick and convenient delivery from a wide variety of restaurants. Choose from meals, snacks, and beverages, all delivered to your doorstep in no time.</p>
+                    </div>
+                </div>
+            
+                <div class="menu-item">
+                    <a href="#" class="contact">Contact</a>
+                    <div class="description-box">
+                        <h4>Contact Us</h4>
+                        <p>Have any questions or concerns? Get in touch with our customer support team for assistance with orders, issues, or inquiries about our services.</p>
+                        <p><strong>Customer Care:</strong> Call us at <a href="tel:+18001234567">+1 800 123 4567</a> for immediate support.</p>
+                    </div>
+                </div>
+            </nav>
+                    </div>
+                </div>
+            </nav>
+    
+</nav>
+
+            <button class="login-button" onclick="showLoginForm()">Login</button>
+        </header>
+        <div style="position: relative;" class="page">
+          <img src="./restaurant.jpg" alt="background image" class="image">
+          <p class="text">Order From The Widest Range Of Restaurants.</p>
+          <div class="search-container">
+              <input type="text" class="search-input" placeholder="Search for restaurants...">
+              <button class="search-button" onclick="goToWebpage()">Search</button>
+
+          </div>
+        </div>
+        <div class="image-gallery">
+            <div class="gallery-item">
+                <img src="burger.jpg" alt="Burger Image" class="gallery-image">
+                <div class="image-description">
+                    <h3>Burger Shack</h3>
+                    <p>Available at: Kamaladi </p>
+                    <p>Customer Rating: 4.2</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="pizza.jpg" alt="Pizza Image" class="gallery-image">
+                <div class="image-description">
+                    <h3>Papa's Pizzeria</h3>
+                    <p>Available at: Chakrapath</p>
+                    <p>Customer Rating: 4.1</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="chicken.jpg" alt="Chicken Image" class="gallery-image">
+                <div class="image-description">
+                    <h3>KKFC</h3>
+                    <p>Available at: Durbar Marg</p>
+                    <p>Customer Rating: 4.0</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="icecream.webp" alt="Icecream Image" class="gallery-image">
+                <div class="image-description">
+                    <h3>Mama's Icecream</h3>
+                    <p>Available at: Chabahill</p>
+                    <p>Customer Rating: 4.3</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="MOMO.jpg" alt="MOMO Image" class="gallery-image">
+                <div class="image-description">
+                    <h3>Momo Man</h3>
+                    <p>Available at: Boudha</p>
+                    <p>Customer Rating: 4.3</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="paratha.jpg" alt="Paratha Image" class="gallery-image">
+                <div class="image-description">
+                    <h3>Western Tandoori and Naan House</h3>
+                    <p>Available at: Anamnagar</p>
+                    <p>Customer Rating: 4.1</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="sandwich.jpg" alt="Sandwich Image" class="gallery-image">
+                <div class="image-description">
+                    <h3>R&B Sandwich House</h3>
+                    <p>Available at: Thamel</p>
+                    <p>Customer Rating: 4.4</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="corndog.jpg" alt="Corndog Image" class="gallery-image">
+                <div class="image-description">
+                    <h3>Food Name: Corndog Station</h3>
+                    <p>Available at: Sukedhara</p>
+                    <p>Customer Rating: 4.6</p>
+                </div>
+            </div>
+        </div>
+        </div>
+        <!-- Login Form -->
+        <!-- Login Form -->
+<div id="loginForm" class="form-container">
+    <span class="close-btn" onclick="closeForms()">&times;</span>
+    <h2>Login</h2>
+    <form onsubmit="handleLogin(event)">
+        <div class="input-box">
+            <input type="text" id="loginUsername" placeholder="Username" required>
+            <i class='bx bxs-user'></i>
+        </div>
+        <div class="input-box">
+            <input type="password" id="loginPassword" placeholder="Password" required>
+            <i class='bx bxs-lock-alt'></i>
+        </div>
+        <button type="submit">Login</button>
+
+        <!-- Social Login Buttons -->
+        <div class="social-buttons" style="margin-top: 15px; display: flex; flex-direction: column; gap: 10px;">
+            <button type="button" style="background-color: #3b5998; color: white; border: none; border-radius: 5px; height: 50px; font-weight: bold; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+                <i class='bx bxl-facebook-circle' style="margin-right: 10px; font-size: 20px;"></i> Login with Facebook
+            </button>
+            <button type="button" style="background-color: #db4437; color: white; border: none; border-radius: 5px; height: 50px; font-weight: bold; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+                <i class='bx bxl-google' style="margin-right: 10px; font-size: 20px;"></i> Login with Google
+            </button>
+        </div>
+
+        <div class="switch-link">
+            <p>Don't have an account? <a href="#" onclick="showRegisterForm()">Register Here</a></p>
+        </div>
+    </form>
+</div>
+
+<!-- Register Form (Moved Outside) -->
+<div id="registerForm" class="form-container">
+    <span class="back-btn" onclick="showLoginForm()" title="Back to Login">
+        <i class='bx bx-left-arrow-alt'></i>
+    </span>
+    <span class="close-btn" onclick="closeForms()">&times;</span>
+    <h2>Register</h2>
+    <form onsubmit="handleRegister(event)">
+        <div class="input-box">
+            <input type="text" id="registerName" placeholder="Full Name" required>
+            <i class='bx bxs-user'></i>
+        </div>
+        <div class="input-box">
+            <input type="email" id="registerEmail" placeholder="Email" required>
+            <i class='bx bxs-envelope'></i>
+        </div>
+        <div class="input-box">
+            <input type="password" id="registerPassword" placeholder="Password" required>
+            <i class='bx bxs-lock-alt'></i>
+        </div>
+        <div class="input-box">
+            <input type="password" id="registerConfirmPassword" placeholder="Confirm Password" required>
+            <i class='bx bxs-lock-alt'></i>
+        </div>
+        <button type="submit">Register</button>
+
+        <!-- Social Buttons -->
+        <div class="social-buttons" style="margin-top: 15px; display: flex; flex-direction: column; gap: 10px;">
+            <button type="button" style="background-color: #3b5998; color: white; border: none; border-radius: 5px; height: 50px; font-weight: bold; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+                <i class='bx bxl-facebook-circle' style="margin-right: 10px; font-size: 20px;"></i> Register with Facebook
+            </button>
+            <button type="button" style="background-color: #db4437; color: white; border: none; border-radius: 5px; height: 50px; font-weight: bold; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+                <i class='bx bxl-google' style="margin-right: 10px; font-size: 20px;"></i> Register with Google
+            </button>
+        </div>
+
+        <div class="switch-link">
+            <p>Already have an account? <a href="#" onclick="showLoginForm()">Login Here</a></p>
+        </div>
+    </form>
+ </div>
+
+    
+</body>
+             
+    
+</html>

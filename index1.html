@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Thela</title>
+    <link rel="stylesheet" href="index1.css">
+    <!-- Boxicons for filter icon -->
+    <link href="https://unpkg.com/boxicons/css/boxicons.min.css" rel="stylesheet">
+</head>
+<script>
+ function gotoWebSite() {
+        // Redirect to webpage.html
+            window.location.href = 'index.html';
+              }
+</script>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.jpg" onclick="gotoWebSite()" alt="Digital Thela">
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Restaurant name or cuisine">
+            <button>Find Restaurants</button>
+        </div>
+        <div class="login">
+            <button>Login</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="main-header">
+            <h1>Restaurants and Stores</h1>
+            <!-- Filter button placed on the right -->
+            <div class="filter-wrapper">
+                <button class="filter-button" onclick="toggleFilter()">
+                    <i class='bx bx-filter'></i>Filters
+                </button>
+                <span class="filter-label"></span> <!-- Added "Filter" label -->
+            </div>
+        </div>
+
+        <div class="location">
+            <label for="location-select">Choose Location:</label>
+            <select id="location-select">
+                <option value="kathmandu">Kathmandu</option>
+                <option value="bhaktapur">Bhaktapur</option>
+                <option value="lalitpur">Lalitpur</option>
+                <option value="pokhara">Pokhara</option>
+                <option value="chitwan">Chitwan</option>
+            </select>
+            <span> <a href="#"></a></span>
+        </div>
+
+        <!-- Filter Options Container -->
+        <div id="filterContainer" class="filter-container">
+            <h3>Filter Options</h3>
+            <div class="filter-item">
+                <label for="food-select">Food Item</label>
+                <select id="food-select">
+                    <option value="food-az">Food Item (A to Z)</option>
+                    <option value="food-za">Food Item (Z to A)</option>
+                </select>
+            </div>
+            <div class="filter-item">
+                <label for="restaurant-select">Restaurant Name</label>
+                <select id="restaurant-select">
+                    <option value="restaurant-az">Restaurant Name (A to Z)</option>
+                    <option value="restaurant-za">Restaurant Name (Z to A)</option>
+                </select>
+            </div>
+            <div class="filter-item">
+                <label for="price-select">Price</label>
+                <select id="price-select">
+                    <option value="price-low">Price (Low to High)</option>
+                    <option value="price-high">Price (High to Low)</option>
+                </select>
+            </div>
+        </div>
+
+        <section class="restaurant-list">
+            <div class="restaurant-card">
+                <img src="burger.jpg" alt="Restaurant 1">
+                <h4>Fuchhey Restaurant</h4>
+                <p>Putalisadak, Approx: 0.1 km</p>
+                <p>Multi Cuisine | Local Snacks</p>
+                <button>♡</button>
+            </div>
+
+            <div class="restaurant-card">
+                <img src="pizza.jpg" alt="Restaurant 2">
+                <h4>New Sip 'n Skip Lounge and Bar</h4>
+                <p>Putalisadak, Approx: 0.3 km</p>
+                <p>Multi Cuisine</p>
+                <button>♡</button>
+            </div>
+
+            <div class="restaurant-card">
+                <img src="chicken.jpg" alt="Restaurant 3">
+                <h4>Angan - Putalisadak</h4>
+                <p>Putalisadak, Approx: 0.3 km</p>
+                <p>Multi Cuisine</p>
+                <button>♡</button>
+            </div>
+
+            <div class="restaurant-card">
+                <img src="MOMO.jpg" alt="Restaurant 4">
+                <h4>Fuchhey Restaurant</h4>
+                <p>Putalisadak, Approx: 0.1 km</p>
+                <p>Multi Cuisine | Local Snacks</p>
+                <button>♡</button>
+            </div>
+
+            <div class="restaurant-card">
+                <img src="icecream.webp" alt="Restaurant 5">
+                <h4>New Sip 'n Skip Lounge and Bar</h4>
+                <p>Putalisadak, Approx: 0.3 km</p>
+                <p>Multi Cuisine</p>
+                <button>♡</button>
+            </div>
+
+            <div class="restaurant-card">
+                <img src="sandwich.jpg" alt="Restaurant 6">
+                <h4>Angan - Putalisadak</h4>
+                <p>Putalisadak, Approx: 0.3 km</p>
+                <p>Indian | Indian Sweets | Vegetarian | Vegan | Jalebi | Rasmalai | Lalmohan</p>
+                <button>♡</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+    </footer>
+
+    <script>
+        function toggleFilter() {
+            const filterContainer = document.getElementById('filterContainer');
+            filterContainer.style.display = filterContainer.style.display === 'block' ? 'none' : 'block';
+        }
+
+        // Example: Filtering functionality based on selected options
+        document.getElementById('food-select').addEventListener('change', function () {
+            const selectedFood = this.value;
+            console.log('Selected Food Filter:', selectedFood);
+            // Implement logic to filter based on food selection
+        });
+
+        document.getElementById('restaurant-select').addEventListener('change', function () {
+            const selectedRestaurant = this.value;
+            console.log('Selected Restaurant Filter:', selectedRestaurant);
+            // Implement logic to filter based on restaurant selection
+        });
+
+        document.getElementById('price-select').addEventListener('change', function () {
+            const selectedPrice = this.value;
+            console.log('Selected Price Filter:', selectedPrice);
+            // Implement logic to filter based on price selection
+        });
+    </script>
+
+</body>
+
+</html>
